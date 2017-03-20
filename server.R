@@ -111,23 +111,8 @@ ui <- dashboardPage(
                 plotOutput(outputId = "chartplot")),
               
               # Table output
-              dataTableOutput("data_table")),
-      tabItem((tabName="sqc"),
-              sequence_data <- read.csv(
-                paste0(
-                  "https://gist.githubusercontent.com/kerryrodden/7090426/"
-                  ,"raw/ad00fcf422541f19b70af5a8a4c5e1460254e6be/visit-sequences.csv"
-                )
-                ,header=F
-                ,stringsAsFactors = FALSE,
-                sunburst(sequence_data)
-              )
-              
-             
-              
-              )
+              dataTableOutput("data_table"))
                 
-              
               )
   )
 )
